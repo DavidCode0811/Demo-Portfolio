@@ -122,7 +122,7 @@ span{
 
 .dynamic-txts ul {
     position: relative;
-    animation: slide 10s infinite;
+    /* animation: slide 10s infinite; */
 }
 
 .dynamic-txts li {
@@ -138,40 +138,51 @@ span{
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid var(--main-color);
+    width: 0;
+    animation:none;
 }
 
 .dynamic-txts li:nth-child(1) span {
-    animation: typing 15s steps(13) 2s infinite, blink 0.7s step-end infinite;
+    /* animation: typing 15s steps(13) 2s infinite, blink 0.7s step-end infinite; */
     animation-delay: 0s, 0s;
 }
 .dynamic-txts li:nth-child(2) span {
-    animation: typing 15s steps(17) 2s infinite, blink 0.7s step-end infinite;
+    /* animation: typing 15s steps(17) 2s infinite, blink 0.7s step-end infinite; */
     animation-delay: 4s, 4s;
 }
 .dynamic-txts li:nth-child(3) span {
-    animation: typing 15s steps(16) 2s infinite, blink 0.7s step-end infinite;
+    /* animation: typing 15s steps(16) 2s infinite, blink 0.7s step-end infinite; */
     animation-delay: 8s, 8s;
 }
-
-/* Slide after each typing animation completes */
-@keyframes slide {
-    0% { transform: translateY(0); }
-    33.33% { transform: translateY(-3.5rem); }
-    66.66% { transform: translateY(-7rem); }
-    100% { transform: translateY(0); }
+.dynamic-txts ul {
+    animation: loop 12s infinite;
 }
-
-/* Typing */
-@keyframes typing {
-    0% { width: 0; }
-    50% { width: 100%; }
-    100% { width: 0; }
+@keyframes typingFade {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        width: 100%;
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        width: 1;
+        opacity: 1;
+    }
 }
-
-/* Blinking */
 @keyframes blink {
     0%, 100% { border-color: var(--main-color); }
     50% { border-color: transparent; }
+}
+@keyframes loop {
+    0%, 100% { }
 }
 
 /* .logo span{
