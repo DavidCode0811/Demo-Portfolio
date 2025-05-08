@@ -225,8 +225,8 @@ section {
 
 .home-img {
     position: relative;
-    width: 35rem;
-    height: 35rem;
+    width: 50rem;
+    height: 50rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -245,7 +245,8 @@ section {
 .home-img img {
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 600px;
+    top: 5px;
     object-fit: cover;
     transition: 0.5s ease;
 }
