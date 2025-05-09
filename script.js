@@ -184,5 +184,14 @@ VanillaTilt.init(document.querySelectorAll(".info-box"), {
     "max-glare": 0.2
 });
 
+const cursor = document.createElement('div');
+cursor.classList.add('neon-cursor');
+document.body.appendChild(cursor);
+
+document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll(); // Check on initial load
