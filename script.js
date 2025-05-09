@@ -177,5 +177,12 @@ revealElements.forEach(element => {
     element.style.transition = 'all 0.5s ease';
 });
 
+VanillaTilt.init(document.querySelectorAll(".info-box"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2
+});
+
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll(); // Check on initial load

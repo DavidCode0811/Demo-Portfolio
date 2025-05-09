@@ -313,7 +313,8 @@ section {
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: 0.3s ease;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
 }
 
 .info-box:hover {
